@@ -1,0 +1,8 @@
+services:
+    charts_project:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      volumes:
+      - .:/app
+      
