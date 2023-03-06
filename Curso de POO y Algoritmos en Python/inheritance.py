@@ -21,6 +21,22 @@ class Cuadrado(Rectangulo):
 
     # Se debe adaptar a los parametros de la Superclase
 
+# Polimorfism = Habilidad de cambiar/adaptar forma de una subclase para poder usar metodos de una superclase
+
+class Animal:
+    def speak(self):
+        raise NotImplementedError("Subclass must implement this method")
+ 
+class Dog(Animal):
+    def speak(self):
+        return "Woof!"
+ 
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+
+
 
 if __name__ == '__main__':
     
@@ -33,4 +49,14 @@ if __name__ == '__main__':
     square = Cuadrado(lado)
 
     print(f"The Area of the Rectangle and Square are {rectangle.find_area()} and {square.find_area()}")
+
+    # Seeing how Polimorfism works in two different objects
+
+    # Create a list of Animal objects
+    
+    animals = [Dog(), Cat()]
+ 
+    # Call the speak method on each object
+    for animal in animals:
+        print(animal.speak())
 
